@@ -1,0 +1,51 @@
+.movie-item {
+  margin: 2em 0;
+
+  .movie-details {
+    margin-top: 0.5em;
+    height: 20em;
+    position: relative;
+
+    .movie-title {
+      display: block;
+      font-size: 1.2rem;
+      text-align: center;
+      position: absolute;
+      top: 0;
+
+    }
+
+    .movie-actors {
+      display: block;
+      font-size: 0.6rem;
+      text-align: center;
+      color: #fff;
+      padding: 2em 0;
+      position: absolute;
+      bottom: 10em;
+    }
+
+    .movie-comparison {
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+
+      .movie-provider,
+      .movie-price {
+        font-size: 0.6rem;
+      }
+
+      &.cheaper-option {
+        bottom: 1.5em;
+
+        .movie-provider,
+        .movie-price {
+          color: red;
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+.search {
+  margin: 2em auto;
+  background-color: #000;
+  color: #ffe81f;
+
+  &:focus {
+    background-color: #000;
+    border-color: #ffe81f;
+  }
+}
