@@ -2,6 +2,24 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# Developer Notes.
+This is my implimentation of the Lexicon Coding Challenge. The app - which is a component is divided into a components folder and a utils folder. The Utils folder contains all the functions and unit tests associated with the app utility functions - such as getting the data , formatting it, and storage/retrival from session storage. 
+
+You can run the functions using npm test anywhere in the application. This
+The API was not reliable so I decided to use a pure front end implimentation - one where its 
+a. Dependant on the user to reload the website (an error message does show incase of failed response from the server)
+b. If we do get data back, it is stored in session storage - this can be stored in local-storage as well. If this was a full-stack application which given the domain of the challenge, its not - we could have a BE that polls the API to get the data and store it elsewhere. Then perhaps do SSR (Serverside rendering) using something like NEXT JS. But given I assumed we have to deploy this component onto a client existing website and their API is already shoddy - we can use a pure FE implimentation.
+
+There was no need to use REDUX for only one API call and such a flat react node structure. It uses oneclass component that passes down props to the search and list components and then to the item and image components. 
+
+I added in Image lazy loading to allow images to gracefuly load via an npm package. I also added in bootstrap for some CSS flair. 
+
+Given I was busy I only was able to give this 5-6 hours of time spread over 2 days ( Sunday and Monday ) I wasn't able to implement Unit tests for the FE components. Thats partly because Im using React 17+ and I wanted to use Enzyme - and was having some issues getting that working. Based on my search Enzyme doesnt work with React 17 yet and there is a work around - but I didnt implement that. I wanted enzyme because it's great for snapshot testing. I can implement that but I don't have time tomorrow so maybe next time. I also wanted to implement a loading SVG but wasn't able to find something suitable for the theme of this website. 
+
+You can run the application using `npm start` and test it using `npm test` which cover both async and sync functions. You
+
+The app is fully responsive. 
+
 ## Available Scripts
 
 In the project directory, you can run:
